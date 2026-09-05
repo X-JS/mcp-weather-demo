@@ -1,0 +1,9 @@
+[project]
+name = "weather-mcp"
+version = "0.1.0"
+description = "MCP (Model Context Protocol) 天气服务端 — 纯 stdio / JSON-RPC 2.0 实现"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.28.0",
+    "mcp>=1.0.0",
+]
