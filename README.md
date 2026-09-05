@@ -1,8 +1,4 @@
-# CLAUDE.md
-
-This file provides guidance to AI assistants when working with code in this repository.
-
-## Project Overview
+## 项目预览
 
 `weather_mcp` — 纯 stdio / JSON-RPC 2.0 实现的 MCP (Model Context Protocol) 天气服务端。
 
