@@ -5,11 +5,11 @@ MCP 天气服务端 — Streamable HTTP 传输
 
 import sys
 import httpx
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 
 WEATHER_API = "https://uapis.cn/api/v1/misc/weather"
 
-mcp = FastMCP("weather-mcp-http", host="0.0.0.0", port=8000)
+mcp = FastMCP("weather-mcp-http")
 
 
 @mcp.tool()
@@ -59,7 +59,10 @@ def get_current_weather(city: str, state: str = "", country: str = "") -> str:
     return "\n".join(lines)
 
 
-if __name__ == "__main__":
+def main() -> None:
     if sys.platform == "win32":
         sys.stdout.reconfigure(encoding="utf-8")
-    mcp.run(transport="streamable-http")
+    mcp.run(transport="streamable-http", host="0.0.0.0", port=8000)
+
+if __name__ == "__main__":
+    main()

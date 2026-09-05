@@ -1,9 +1,23 @@
 [project]
-name = "weather-mcp"
+name = "mcp-weather-demo"
 version = "0.1.0"
-description = "MCP (Model Context Protocol) 天气服务端 — 纯 stdio / JSON-RPC 2.0 实现"
-requires-python = ">=3.10"
-dependencies = [
-    "httpx>=0.28.0",
-    "mcp>=1.0.0",
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "iergate@163.com", email = "iergate@163.com" }
 ]
+requires-python = ">=3.13"
+dependencies = [
+    "fastmcp>=4.0.3",
+    "httpx>=0.28.1",
+]
+
+[project.scripts]
+mcp-weather-demo = "mcp_weather_demo:main"
+mcp-weather-stdio = "mcp_weather_demo.main:main"
+fastmcp-stdio = "mcp_weather_demo.weather_mcp_fastmcp:main"
+fastmcp-http = "mcp_weather_demo.weather_mcp_http:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"

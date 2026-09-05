@@ -5,7 +5,7 @@ MCP 天气服务端 — 使用 mcp 官方库 (FastMCP) 实现
 
 import sys
 import httpx
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 
 GEOCODING_URL = "https://geocoding-api.open-meteo.com/v1/search"
 WEATHER_URL = "https://api.open-meteo.com/v1/forecast"
@@ -110,7 +110,11 @@ def get_current_weather(city: str, state: str = "", country: str = "") -> str:
     return "\n".join(lines)
 
 
-if __name__ == "__main__":
+def main() -> None:
     if sys.platform == "win32":
         sys.stdout.reconfigure(encoding="utf-8")
     mcp.run(transport="stdio")
+
+
+if __name__ == "__main__":
+    main()

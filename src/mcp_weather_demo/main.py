@@ -33,7 +33,7 @@ WEATHER_CODES = {
     95: "雷暴", 96: "雷暴冰雹(轻)", 99: "雷暴冰雹(重)",
 }
 
-_LOG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs")
+_LOG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../logs")
 os.makedirs(_LOG_DIR, exist_ok=True)
 _STARTUP_TS = datetime.now().strftime("%Y%m%d_%H%M%S")
 _LOG_FILE = os.path.join(_LOG_DIR, f"log-{_STARTUP_TS}.txt")
