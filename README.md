@@ -2,9 +2,9 @@
 
 `mcp_weather_demo` — 基于 **uv** 管理环境的 MCP (Model Context Protocol) 天气服务端，提供三种运行方式：
 
-- 纯 stdio / JSON-RPC 2.0 实现（`main.py`）
-- FastMCP 官方库实现（`weather_mcp_fastmcp.py`）
-- FastMCP Streamable HTTP 传输（`weather_mcp_http.py`）
+- 纯 stdio / JSON-RPC 2.0 实现（`original_stdio.py`）
+- FastMCP 官方库实现（`fastmcp_stdio.py`）
+- FastMCP Streamable HTTP 传输（`fastmcp_http.py`）
 
 通过免费天气 API 查询实时天气，以 MCP Tool 形式暴露 `get_current_weather` 接口。
 

@@ -1,6 +1,6 @@
 """
 MCP 天气服务端 — 使用 mcp 官方库 (FastMCP) 实现
-功能与 main.py 一致，使用 Open-Meteo API 提供 get_current_weather 工具
+功能与 original_stdio.py 一致，使用 Open-Meteo API 提供 get_current_weather 工具
 """
 
 import sys
